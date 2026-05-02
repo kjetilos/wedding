@@ -279,14 +279,14 @@
       font-weight: 400;
     }
 
-    .dresscode-section {
+    .wishlist-section {
       margin-top: 2.8rem;
       text-align: center;
       opacity: 0;
       animation: fadeUp 1.4s ease 1.7s forwards;
     }
 
-    .dresscode-label {
+    .wishlist-label {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
       font-size: clamp(0.9rem, 2.5vw, 1.1rem);
@@ -296,11 +296,14 @@
       margin-bottom: 0.6rem;
     }
 
-    .dresscode-text {
-      font-family: 'Cinzel', serif;
-      font-weight: 400;
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
-      color: var(--dark);
+    .wishlist-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2.3vw, 1rem);
+      color: rgba(14, 12, 10, 0.7);
+      line-height: 1.4;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
     @media (max-width: 480px) {
@@ -308,7 +311,7 @@
       body { padding: 2.5rem 1rem 3rem; }
       .venue-section { gap: 1.6rem; margin-top: 2.4rem; }
       .rsvp-section { margin-top: 2.2rem; }
-      .dresscode-section { margin-top: 2.2rem; }
+      .wishlist-section { margin-top: 2.2rem; }
     }
   </style>
 </head>
@@ -360,12 +363,13 @@
       <p class="venue-time">20:30</p>
       <p class="venue-location"><a href="https://www.google.com/maps/search/Bankveien+1,+1430+Ås/" target="_blank">Bankveien 1, 1430 Ås</a><br>Second floor</p>
       <p class="toastmaster-info">Toastmaster: <span class="toastmaster-name">Malin Løken</span><br><span class="toastmaster-phone">+47 406 33 771</span><br>For entertainment, speeches or other contributions</p>
+      <p class="venue-subtitle" style="margin-top: 1rem; font-size: clamp(0.85rem, 2.2vw, 0.95rem);">Dress code: Pent</p>
     </div>
   </div>
 
-  <div class="dresscode-section">
-    <p class="dresscode-label">Dress Code</p>
-    <p class="dresscode-text">Pent</p>
+  <div class="wishlist-section">
+    <p class="wishlist-label">Wishlist</p>
+    <p class="wishlist-text">Your presence at our wedding is the greatest gift of all.<br>However, if you wish to honor us with a gift,<br>a contribution towards our dream honeymoon would be wonderful.</p>
   </div>
 
 </body>
