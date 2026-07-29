@@ -29,6 +29,7 @@
       justify-content: center;
       min-height: 100vh;
       padding: 3rem 1.5rem 4rem;
+      font-size: 1.05rem;
     }
 
     .invite-label {
@@ -306,12 +307,162 @@
       margin: 0 auto;
     }
 
+    .contribution-section {
+      margin-top: 2.8rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeUp 1.4s ease 1.8s forwards;
+    }
+
+    .contribution-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      letter-spacing: 0.15em;
+      color: rgba(14, 12, 10, 0.7);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .contribution-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2.3vw, 1rem);
+      color: rgba(14, 12, 10, 0.7);
+      line-height: 1.5;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .contribution-qr {
+      margin-top: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+    }
+
+    .contribution-qr img {
+      width: min(260px, 75vw);
+      height: auto;
+      border: 1px solid rgba(14, 12, 10, 0.08);
+      border-radius: 14px;
+      background: white;
+      padding: 0.75rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .contribution-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .contribution-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      min-width: 210px;
+      width: 100%;
+      max-width: 240px;
+      padding: 0.9rem 1.4rem;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--dark);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: clamp(1rem, 2.8vw, 1.15rem);
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(201, 169, 110, 0.2);
+    }
+
+    .contribution-button:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .button-icon {
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.95);
+    }
+
+    .button-icon.vipps-icon {
+      background-color: transparent;
+      background-image: url("vipps_transparent.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+    }
+
+    .button-icon.wise-icon {
+      background-color: #24b47e;
+      background-image: url("wise.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+    }
+
     @media (max-width: 480px) {
       .divider-line { width: 45px; }
-      body { padding: 2.5rem 1rem 3rem; }
+      body { padding: 2.5rem 1rem 3rem; font-size: 1.15rem; }
       .venue-section { gap: 1.6rem; margin-top: 2.4rem; }
       .rsvp-section { margin-top: 2.2rem; }
       .wishlist-section { margin-top: 2.2rem; }
+      .contribution-section { margin-top: 2.2rem; }
+      .venue-name { font-size: clamp(1.5rem, 6vw, 2rem); }
+      .venue-subtitle,
+      .toastmaster-info,
+      .wishlist-text,
+      .date,
+      .dresscode-text {
+        font-size: clamp(0.95rem, 2.7vw, 1.1rem);
+      }
+    }
+
+    .contribution-link {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: clamp(1rem, 2.8vw, 1.15rem);
+      color: var(--dark);
+      background: var(--gold);
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease;
+    }
+
+    .contribution-link:hover {
+      background: var(--gold-light);
+    }
+
+    @media (max-width: 480px) {
+      .divider-line { width: 45px; }
+      body { padding: 2.5rem 1rem 3rem; font-size: 1.15rem; }
+      .venue-section { gap: 1.6rem; margin-top: 2.4rem; }
+      .rsvp-section { margin-top: 2.2rem; }
+      .wishlist-section { margin-top: 2.2rem; }
+      .contribution-section { margin-top: 2.2rem; }
+      .venue-name { font-size: clamp(1.5rem, 6vw, 2rem); }
+      .venue-subtitle,
+      .toastmaster-info,
+      .wishlist-text,
+      .date,
+      .dresscode-text {
+        font-size: clamp(0.95rem, 2.7vw, 1.1rem);
+      }
     }
   </style>
 </head>
@@ -341,8 +492,6 @@
     </div>
   </div>
 
-  </div>
-
   <div class="rsvp-section">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjl5vFjY6IpuvGEcO4UVGfX4DMFluakVDLDqCA-4476f7hkg/viewform" target="_blank" class="rsvp-button">RSVP</a>
   </div>
@@ -363,13 +512,32 @@
       <p class="venue-time">20:30</p>
       <p class="venue-location"><a href="https://www.google.com/maps/search/Bankveien+1,+1430+Ås/" target="_blank">Bankveien 1, 1430 Ås</a><br>Second floor</p>
       <p class="toastmaster-info">Toastmaster: <span class="toastmaster-name">Malin Løken</span><br><span class="toastmaster-phone">+47 406 33 771</span><br>For entertainment, speeches or other contributions</p>
-      <p class="venue-subtitle" style="margin-top: 1rem; font-size: clamp(0.85rem, 2.2vw, 0.95rem);">Dress code: Pent</p>
+      <p class="venue-subtitle" style="margin-top: 1rem; font-size: clamp(0.85rem, 2.2vw, 0.95rem);">Dress code: Summer festive</p>
     </div>
   </div>
 
   <div class="wishlist-section">
     <p class="wishlist-label">Wishlist</p>
     <p class="wishlist-text">Your presence at our wedding is the greatest gift of all.<br>However, if you wish to honor us with a gift,<br>a contribution towards our dream honeymoon would be wonderful.</p>
+  </div>
+
+  <div class="contribution-section">
+    <p class="contribution-label">Contribution</p>
+    <p class="contribution-text">Scan the QR code or follow the link to send a gift towards our honeymoon.</p>
+    <div class="contribution-qr">
+      <img src="8707NF.jpg" alt="VIPPS QR code for gift contribution" />
+      <div class="contribution-buttons">
+        <a href="https://qr.vipps.no/box/94c9ca5f-62d3-47d8-b1ad-40c93ee3bdc8/pay-in" target="_blank" class="contribution-button">
+          <span class="button-icon vipps-icon"></span>
+          Give via VIPPS
+        </a>
+        <a href="https://wise.com/pay/me/kjetilo1" target="_blank" class="contribution-button">
+          <span class="button-icon wise-icon"></span>
+          Give via Wise
+        </a>
+      </div>
+    </div>
+    <p class="contribution-text" style="margin-top: 1.2rem;">Or transfer directly to account number <strong>1227 93 62355</strong>.</p>
   </div>
 
 </body>
