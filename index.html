@@ -430,6 +430,69 @@
       }
     }
 
+    .faq-section {
+      margin-top: 2.8rem;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      animation: fadeUp 1.4s ease 2.0s forwards;
+    }
+
+    .faq-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      letter-spacing: 0.15em;
+      color: rgba(14, 12, 10, 0.7);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+
+    .faq-item {
+      margin-top: 1.4rem;
+      padding: 1.2rem 1.4rem;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(14, 12, 10, 0.08);
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+
+    .faq-question {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--dark);
+      margin-bottom: 0.55rem;
+    }
+
+    .faq-answer {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2.2vw, 1rem);
+      color: rgba(14, 12, 10, 0.65);
+      line-height: 1.6;
+    }
+
+    .faq-qr {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .faq-qr img {
+      width: min(220px, 60vw);
+      max-width: 240px;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(14, 12, 10, 0.08);
+      background: white;
+      padding: 0.75rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+
     .contribution-link {
       display: inline-block;
       font-family: 'Cinzel', serif;
@@ -455,6 +518,7 @@
       .rsvp-section { margin-top: 2.2rem; }
       .wishlist-section { margin-top: 2.2rem; }
       .contribution-section { margin-top: 2.2rem; }
+      .faq-section { margin-top: 2.2rem; }
       .venue-name { font-size: clamp(1.5rem, 6vw, 2rem); }
       .venue-subtitle,
       .toastmaster-info,
@@ -538,6 +602,43 @@
       </div>
     </div>
     <p class="contribution-text" style="margin-top: 1.2rem;">Or transfer directly to account number <strong>1227 93 62355</strong>.</p>
+  </div>
+
+  <div class="faq-section">
+    <p class="faq-label">Frequently Asked Questions</p>
+
+    <div class="faq-item">
+      <p class="faq-question">I want to share some awesome pictures of the bride, where can I post them?</p>
+      <p class="faq-answer">We want everyone to share their photos on our shared event gallery at <a href="https://event.pics/pk-wedding" target="_blank">https://event.pics/pk-wedding</a>. This is a place where you can upload your photos and download photos from others easily, without having to create any account.
+
+Please use the gallery to upload images of yourselves, the ceremony, and the party.</p>
+      <div class="faq-qr">
+        <img src="EventPics-QR-GuestAccess-512.svg" alt="QR code for the shared event gallery" />
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">What should I do between the ceremony and the party?</p>
+      <p class="faq-answer">Between the ceremony and the party some groups are gathering in various places, and you are all welcome to hang out at Kjetil's place (Torderudveien 1B). It will be open for everyone, with people hanging out and having a BBQ. You can get there by taking bus 510 to the Nyborgveien stop.
+
+If you have not been in Ås before, we suggest taking a walk in the University area and heading to Ås sentrum for a coffee at Håndverksbakeriet before heading up to Kjetil's place.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">How do I go to/from the Ceremony?</p>
+      <p class="faq-answer">Ås Kirke is in walking distance from the bus stop called "Universitetet i Ås". Take the bus, or if you need help with rides or directions, please contact Kjetil or Pricia.
+
+There are parking spaces by the church. If those are full, there is more parking down by Eika sportsenter near the roundabout.
+
+<a href="https://maps.app.goo.gl/VhXXsTNTFgTG7pdh9" target="_blank">See the route from the bus stop to the church on Google Maps</a>.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">How do I get home from the Party?</p>
+      <p class="faq-answer">The party is close to the train station. The last train towards Oslo is R21 and leaves at 23:45, taking 19 minutes to Oslo. The next option is the night bus 540N, which leaves at 01:32 from Ås videregående skole, but it takes 48 minutes since it has quite a lot of stops on the way.
+
+If you miss the train or bus, then we have sofas at Kjetil's place.</p>
+    </div>
   </div>
 
 </body>
